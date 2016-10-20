@@ -1,0 +1,21 @@
+{
+  "name": "power51app-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "alarm": "node alarm"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awesome-pid": "^1.0.3",
+    "chinese-random-name": "^0.1.2",
+    "lodash": "^4.15.0",
+    "moment": "^2.14.1",
+    "node-uuid": "^1.4.7",
+    "pokemon-random-name": "^1.0.4",
+    "websocket": "^1.0.23"
+  }
+}

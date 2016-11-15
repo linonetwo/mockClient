@@ -60,12 +60,12 @@ const generateLog = (quentity) => {
     logList.push({
       code: 0,
       type: "Alarm",
-      companyId: 4, // 客户单位ID
-      districtId: 8,  // 厂区ID
-      siteId: 12,      // 变电站ID
-      gatewayId: 14,   // 网关ID
-      cabinetId: 50, // 设备所处机柜的全局唯一ID
-      deviceId: 37,  // 设备的全局唯一ID
+      companyId: 8, // 客户单位ID
+      districtId: 13,  // 厂区ID
+      siteId: 18,      // 变电站ID
+      gatewayId: 19,   // 网关ID
+      cabinetId: 73, // 设备所处机柜的全局唯一ID
+      deviceId: 70,  // 设备的全局唯一ID
 
       alarmCode: _.sample(alarmTypes).code, // 警告编号
       timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间

@@ -32,25 +32,15 @@ function getToSendMessage() {
     code: 0,
     message: "This is a message",
     type: "Data",
-    gatewayId: 14,
-    siteId: 12,
-    districtId: 8,
-    companyId: 4,
+    gatewayId: 43,
+    siteId: 60,
+    districtId: 33,
+    companyId: 49,
     timestamp: moment().format('YYYY-MM-DD HH:mm:ss'),
     data: [
       {
-        deviceId: 37, // 设备的全局唯一ID，随配置文件下发
-        cabinetId: 50, //设备所处机柜的全局唯一ID，随配置文件下发
-        indicatorData: fiftyTwo(),
-      },
-      {
-        deviceId: 46, // 设备的全局唯一ID，随配置文件下发
-        cabinetId: 50, //设备所处机柜的全局唯一ID，随配置文件下发
-        indicatorData: fiftyTwo(),
-      },
-      {
-        deviceId: 51, // 设备的全局唯一ID，随配置文件下发
-        cabinetId: 50, //设备所处机柜的全局唯一ID，随配置文件下发
+        deviceId: 158, // 设备的全局唯一ID，随配置文件下发
+        cabinetId: 99, //设备所处机柜的全局唯一ID，随配置文件下发
         indicatorData: fiftyTwo(),
       }
     ]
@@ -89,8 +79,8 @@ client.on('connect', function (connection) {
 // http://groot.nanchao.org:8081/
 // client.connect('ws://power51app.grootapp.com:81/', 'echo-protocol');
 // const link = () => client.connect('ws://192.168.31.151:2333/', 'echo-protocol');
-const link = () => client.connect('ws://power51app.grootapp.com:81/', 'echo-protocol');
-const interval = 55;
+const link = () => client.connect('ws://power51app.grootapp.com/', 'echo-protocol');
+const interval = 5;
 console.log('start sending message in interval ' + interval);
 setInterval(link, interval * 1000);
 // client.connect('ws://localhost:2333/', 'echo-protocol');

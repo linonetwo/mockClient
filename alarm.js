@@ -60,34 +60,34 @@ const generateLog = (quentity) => {
     logList.push({
       code: 0,
       type: "Alarm",
-      companyId: 8, // 客户单位ID
-      districtId: 13,  // 厂区ID
-      siteId: 18,      // 变电站ID
-      gatewayId: 19,   // 网关ID
-      cabinetId: 73, // 设备所处机柜的全局唯一ID
-      deviceId: 70,  // 设备的全局唯一ID
+      companyId: 7, // 客户单位ID
+      districtId: 11,  // 厂区ID
+      siteId: 40,      // 变电站ID
+      gatewayId: 41,   // 网关ID
+      cabinetId: 94, // 设备所处机柜的全局唯一ID
+      deviceId: 147,  // 设备的全局唯一ID
 
       alarmCode: _.sample(alarmTypes).code, // 警告编号
       timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间
       message: pokemon() + randomName(50),
     })
   }
-  for (let index = 0; index < quentity; index++) {
-    logList.push({
-      code: 0,
-      type: "Alarm",
-      companyId: 8, // 客户单位ID
-      districtId: 15,  // 厂区ID
-      siteId: 20,      // 变电站ID
-      gatewayId: 21,   // 网关ID
-      cabinetId: 75, // 设备所处机柜的全局唯一ID
-      deviceId: 77,  // 设备的全局唯一ID
+  // for (let index = 0; index < quentity; index++) {
+  //   logList.push({
+  //     code: 0,
+  //     type: "Alarm",
+  //     companyId: 7, // 客户单位ID
+  //     districtId: 12,  // 厂区ID
+  //     siteId: 22,      // 变电站ID
+  //     gatewayId: 21,   // 网关ID
+  //     cabinetId: 75, // 设备所处机柜的全局唯一ID
+  //     deviceId: 77,  // 设备的全局唯一ID
 
-      alarmCode: _.sample(alarmTypes).code, // 警告编号
-      timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间
-      message: pokemon() + randomName(50),
-    })
-  }
+  //     alarmCode: _.sample(alarmTypes).code, // 警告编号
+  //     timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间
+  //     message: pokemon() + randomName(50),
+  //   })
+  // }
   return logList;
 }
 

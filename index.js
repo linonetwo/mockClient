@@ -79,7 +79,7 @@ client.on('connect', function (connection) {
 // http://groot.nanchao.org:8081/
 // client.connect('ws://power51app.grootapp.com:81/', 'echo-protocol');
 // const link = () => client.connect('ws://192.168.31.151:2333/', 'echo-protocol');
-const link = () => client.connect('ws://power51app.grootapp.com/', 'echo-protocol');
+const link = () => client.connect('ws://power51app.grootapp.com:81/', 'echo-protocol');
 const interval = 5;
 console.log('start sending message in interval ' + interval);
 setInterval(link, interval * 1000);

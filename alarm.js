@@ -59,18 +59,18 @@ const generateLog = (quentity) => {
   for (let index = 0; index < quentity; index++) {
     logList.push({
       code: 0,
-      type: "Alarm",
+      type: "disconn",
       companyId: 7, // 客户单位ID
       districtId: 11,  // 厂区ID
       siteId: 40,      // 变电站ID
       gatewayId: 41,   // 网关ID
-      message: pokemon() + randomName(50),       
+      message: pokemon() + randomName(5),       
       timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间
       data: [{
         cabinetId: 94, // 设备所处机柜的全局唯一ID
         deviceId: 164,  // 设备的全局唯一ID
         alarmCode: _.sample(alarmTypes).code, // 警告编号      
-        message: pokemon() + randomName(50),
+        message: pokemon() + randomName(5),
       }],
     })
   }

@@ -60,15 +60,15 @@ const generateLog = (quentity) => {
     logList.push({
       code: 0,
       type: "disconn",
-      companyId: 7, // 客户单位ID
-      districtId: 11,  // 厂区ID
-      siteId: 40,      // 变电站ID
-      gatewayId: 41,   // 网关ID
+      companyId: 49, // 客户单位ID
+      districtId: 33,  // 厂区ID
+      siteId: 60,      // 变电站ID
+      gatewayId: 43,   // 网关ID
       message: pokemon() + randomName(5),       
       timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间
       data: [{
-        cabinetId: 94, // 设备所处机柜的全局唯一ID
-        deviceId: 164,  // 设备的全局唯一ID
+        cabinetId: 100, // 设备所处机柜的全局唯一ID
+        deviceId: 159,  // 设备的全局唯一ID
         alarmCode: _.sample(alarmTypes).code, // 警告编号      
         message: pokemon() + randomName(5),
       }],

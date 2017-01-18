@@ -59,19 +59,21 @@ const generateLog = (quentity) => {
   for (let index = 0; index < quentity; index++) {
     logList.push({
       code: 0,
-      type: "disconn",
-      companyId: 49, // 客户单位ID
-      districtId: 33,  // 厂区ID
+      type: "Disconn",
+      companyId: 48, // 客户单位ID
+      districtId: 32,  // 厂区ID
       siteId: 60,      // 变电站ID
-      gatewayId: 43,   // 网关ID
-      message: pokemon() + randomName(5),       
+      gatewayId: 42,   // 网关ID
       timestamp: moment(Date.now()).add(++timeInterval, 'seconds').format('YYYY-MM-DD HH:mm:ss'), // 警告时间
-      data: [{
-        cabinetId: 100, // 设备所处机柜的全局唯一ID
-        deviceId: 159,  // 设备的全局唯一ID
-        alarmCode: _.sample(alarmTypes).code, // 警告编号      
-        message: pokemon() + randomName(5),
-      }],
+      data :[{
+        cabinetId: 95, // 设备所处机柜的全局唯一ID
+        deviceId: 617,  // 设备的全局唯一ID
+        alarmCode: "10300",
+        message: "open",
+        indicatorId:52,// 紧急开关指标ID
+        indicatorValue:"0"
+      }
+      ]
     })
   }
   return logList;
@@ -109,5 +111,5 @@ client.on('connect', function (connection) {
   }
 });
 
-client.connect('ws://power51app.grootapp.com:81/', 'echo-protocol');
+client.connect('ws://power51.grootapp.com:31328/ws/receive');
 // client.connect('ws://192.168.31.151:2333/', 'echo-protocol');
